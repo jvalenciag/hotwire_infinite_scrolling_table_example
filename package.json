@@ -9,6 +9,8 @@
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.20",
     "@tailwindcss/cli": "latest",
-    "tailwindcss": "latest"
+    "tailwindcss": "latest",
+    "debounce": "^1.2.1",
+    "lodash": "^4.17.21"
   }
 }

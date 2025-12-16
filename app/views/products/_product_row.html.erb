@@ -1,0 +1,22 @@
+<% index = offset + product_counter + 1 %>
+<tr id="<%= dom_id product %>">
+  <td class="px-2 py-1.5 text-sm font-normal whitespace-nowrap text-gray-600">
+    <%= index %>
+  </td>
+  <td class="text-ellipsis overflow-hidden px-2 py-1.5 text-sm font-normal whitespace-nowrap text-gray-600">
+    <%= highlight(product.name, query_words) %>  
+    <%# product.variant_name %> 
+  </td>
+  <td class="text-ellipsis overflow-hidden px-2 py-1.5 text-sm font-normal whitespace-nowrap text-gray-600">
+    <%= highlight(product.description, query_words) %>  
+  </td>
+  <td class="px-2 py-1.5 text-sm font-normal whitespace-nowrap text-gray-600">
+    <%= highlight(product.brand.name, query_words) %>  
+  </td>
+  <td class="px-2 py-1.5 text-sm font-normal whitespace-nowrap text-gray-600">
+    <%= product.enabled %>  
+  </td>
+  <td class="px-2 py-1.5 text-sm font-normal whitespace-nowrap text-gray-600">
+    <%= link_to 'Edit', edit_product_path(product) %>
+  </td>
+</tr>

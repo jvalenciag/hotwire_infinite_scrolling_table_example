@@ -1,0 +1,9 @@
+<%= turbo_stream.remove "products-table-body-pagination" %>
+<%= turbo_stream.append "products-table-body" do %>
+  <%= render partial: "product_row", collection: @products, as: :product, locals: { offset: @pagy.offset, query_words: params[:q]&.split(" ") } %>
+  <% if @pagy.next.present? %>
+    <%= turbo_frame_tag "products-table-body-pagination", src: products_path(page: @pagy.next, format: :turbo_stream, q: params[:q]), loading: :lazy do %>
+      <div >Loading...</div>
+    <% end %>
+  <% end %>
+<% end %>
