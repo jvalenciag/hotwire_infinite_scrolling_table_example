@@ -43,7 +43,7 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 gem "slim"
-gem "money-rails", "~> 1.15"
+gem "money-rails", "~> 2.0"
 gem "pagy", "~> 43.2"
 gem "pg_search"
 gem "csv"
